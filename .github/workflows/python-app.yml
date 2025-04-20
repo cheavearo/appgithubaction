@@ -11,13 +11,13 @@ on:
 
 jobs:
     test:
-        runs-on: ubuntu-lastest
+        runs-on: ubuntu-latest
 
         steps:
             # Step 1: Check out the code from the repository
             - name: Check out code
               user: actions/checkout@v2
-              
+
             # Step 2: Set up Python environment
             - name: Set up Python
               users: actions/setup-python@v2
@@ -32,6 +32,3 @@ jobs:
             # Step 4: Run tests
             - name: Run tests
               run: pytest
-    - name: Test with pytest
-      run: |
-        pytest
